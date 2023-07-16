@@ -55,10 +55,7 @@ console.log('------------------------------')
 
 console.log('Las pizzas con ID impar son las siguientes:')
 
-const idImpar = pizzas.forEach( pizza => {
-     if (pizza.id % 2 == 1) console.log(` ${pizza.nombre} y el id: ${pizza.id}`);
-  }
-  )
+const idImpar = pizzas.forEach( pizza => {  if (pizza.id % 2 == 1) console.log(` ${pizza.nombre} y el id: ${pizza.id}.`);})
 
 // const idImpar = pizzas.filter(pizza => pizza.id % 2 == 1 );
 //   console.log(idImpar) // este codigo funciona pero solo devuelve el array sin ser userFriendly
