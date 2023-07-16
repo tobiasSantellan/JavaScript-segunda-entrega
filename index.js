@@ -47,3 +47,61 @@ const pizzas = [
       ingredientes: ["Muzzarella", "Tomate", "Anana"],
     },
   ];
+
+
+console.log("Ejercicio 1: Las pizzas que tengan un ID impar.")
+
+console.log('------------------------------')
+
+console.log('Las pizzas con ID impar son las siguientes:')
+
+// const idImpar = pizzas.filter(pizza => pizza.id % 2 == 1 );
+//   console.log(idImpar) // este codigo funciona pero solo devuelve el array sin ser userFriendly
+
+pizzas.forEach( pizza => {
+    if (pizza.id % 2 == 1) {
+      console.log(` ${pizza.nombre} y el id: ${pizza.id}`);
+    } 
+  }
+  )
+
+console.log('------------------------------')
+console.log('Ejercicio 2: Responder: ¿Hay alguna pizza que valga menos de $600?')
+
+
+
+// const precioMinimo = pizzas.reduce((previous, current) => {
+//     return current.precio < previous.precio ? current : previous;
+// });
+  
+//   console.log( `La pizza que vale menos de 600$ es :`);
+
+//   console.log(precioMinimo) este codigo funciona pero solo devuelve el array sin ser userFriendly
+
+const pizzaMasBarata = pizzas.forEach( pizza => {
+    if (pizza.precio < 600) {
+        console.log(`La ${pizza.nombre}, sale menos que $600, su precio es de $${pizza.precio}.`)
+    }
+})
+
+console.log('------------------------------')
+console.log('Ejercicio 3: El nombre de cada pizza con su respectivo precio.')
+
+const nombreYPrecio = pizzas.forEach( e =>  console.log(`${e.nombre}, $${e.precio}`))
+
+console.log('------------------------------')
+console.log('Ejercicio 4: Todos los ingredientes de cada pizza.')
+
+pizzas.map(e => {
+    let nombre = e.nombre;
+    let ingredientes = e.ingredientes.join(', ');
+
+    return console.log(`La ${nombre} tiene estos ingredientes: ${ingredientes}.`)
+})
+
+
+
+
+
+
+
