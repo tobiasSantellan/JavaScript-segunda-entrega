@@ -55,7 +55,7 @@ console.log('------------------------------')
 
 console.log('Las pizzas con ID impar son las siguientes:')
 
-pizzas.forEach( pizza => {
+const idImpar = pizzas.forEach( pizza => {
      if (pizza.id % 2 == 1) console.log(` ${pizza.nombre} y el id: ${pizza.id}`);
   }
   )
@@ -89,7 +89,7 @@ const nombreYPrecio = pizzas.filter( e =>  console.log(`${e.nombre}, $${e.precio
 console.log('------------------------------')
 console.log('Ejercicio 4: Todos los ingredientes de cada pizza.')
 
-pizzas.filter(e => {
+const nombreEIngredientes = pizzas.filter(e => {
     let nombre = e.nombre;
     let ingredientes = e.ingredientes.join(', ');
 
