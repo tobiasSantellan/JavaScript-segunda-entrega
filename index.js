@@ -55,9 +55,6 @@ console.log('------------------------------')
 
 console.log('Las pizzas con ID impar son las siguientes:')
 
-// const idImpar = pizzas.filter(pizza => pizza.id % 2 == 1 );
-//   console.log(idImpar) // este codigo funciona pero solo devuelve el array sin ser userFriendly
-
 pizzas.forEach( pizza => {
     if (pizza.id % 2 == 1) {
       console.log(` ${pizza.nombre} y el id: ${pizza.id}`);
@@ -65,9 +62,17 @@ pizzas.forEach( pizza => {
   }
   )
 
+// const idImpar = pizzas.filter(pizza => pizza.id % 2 == 1 );
+//   console.log(idImpar) // este codigo funciona pero solo devuelve el array sin ser userFriendly
+
 console.log('------------------------------')
 console.log('Ejercicio 2: Responder: ¿Hay alguna pizza que valga menos de $600?')
 
+const pizzaMasBarata = pizzas.forEach( pizza => {
+    if (pizza.precio < 600) {
+        console.log(`La ${pizza.nombre}, sale menos que $600, su precio es de $${pizza.precio}.`)
+    }
+})
 
 
 // const precioMinimo = pizzas.reduce((previous, current) => {
@@ -77,14 +82,6 @@ console.log('Ejercicio 2: Responder: ¿Hay alguna pizza que valga menos de $600?
 //   console.log( `La pizza que vale menos de 600$ es :`);
 
 //   console.log(precioMinimo) este codigo funciona pero solo devuelve el array sin ser userFriendly
-
-const pizzaMasBarata = pizzas.forEach( pizza => {
-    if (pizza.precio < 600) {
-        console.log(`La ${pizza.nombre}, sale menos que $600, su precio es de $${pizza.precio}.`)
-    }
-})
-
-
 
 console.log('------------------------------')
 console.log('Ejercicio 3: El nombre de cada pizza con su respectivo precio.')
