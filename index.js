@@ -84,10 +84,14 @@ const pizzaMasBarata = pizzas.forEach( pizza => {
     }
 })
 
+
+
 console.log('------------------------------')
 console.log('Ejercicio 3: El nombre de cada pizza con su respectivo precio.')
 
 const nombreYPrecio = pizzas.forEach( e =>  console.log(`${e.nombre}, $${e.precio}`))
+
+
 
 console.log('------------------------------')
 console.log('Ejercicio 4: Todos los ingredientes de cada pizza.')
